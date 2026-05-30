@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Text Gradients */
+  .text-gradient-gray {
+    background: linear-gradient(135deg, #B0B0B0 0%, #E0E0E0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-red {
+    background: linear-gradient(135deg, #B0B0B0 0%, #E63E29 50%, #CD1701 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Blur Orb Effects */
+  .blur-orb-primary {
+    background: radial-gradient(circle, rgba(230, 62, 41, 0.1) 0%, transparent 70%);
+    filter: blur(60px);
+  }
+  
+  .blur-orb-secondary {
+    background: radial-gradient(circle, rgba(205, 23, 1, 0.1) 0%, transparent 70%);
+    filter: blur(80px);
+  }
+
+  /* Accent checkbox */
+  input[type="checkbox"] {
+    accent-color: #E63E29;
+  }
+
+  /* Custom focus ring */
+  .focus-ring-primary:focus {
+    outline: none;
+    border-color: #E63E29;
+    box-shadow: 0 0 0 3px rgba(230, 62, 41, 0.1);
+  }
+}
